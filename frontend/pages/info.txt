@@ -1,0 +1,96 @@
+\chapter{User Manual}
+
+This chapter of the appendix presents the user manual for \textit{Melodia}.
+
+\section{Prerequisites}
+
+This deployment of Melodia requires to following to use:
+
+\begin{itemize}
+    \item Python 3.10 or Later.
+    \item A web browser to access the frontend via localhost.
+    \item OS Compatibility: Tested on Windows, but should run on macOS and Linux.
+    \item An IDE (i.e. VS Code) to view and edit the code, if desired.
+    \item Sufficient disk space (< 100MB).
+    \item Internet connectivity.
+\end{itemize}
+
+\section{Installation Instructions}
+
+\subsection{Preparing the Files}
+
+Extract the \texttt{.zip} file to a location of your choice on your machine. Ensure Python is installed.
+
+\subsection{Create and Active a Virtual Environment (venv)}
+
+For reproducibility and to keep the project self-contained, it is recommended to create and run the project using venv. Navigate to the project folder using \texttt{cd /flask-client} and enter the following, depending on operating system. For Windows user,s you might have to change the PowerShell execution policy (if execution fails). Run PowerShell as Administrator and enter the following command: \\
+
+\texttt{Set-ExecutionPolicy Unrestricted -Scope Process} \\
+
+This will allow the virtual environment to be activated. Now, you can use the following commands to activate it:
+
+\begin{itemize}
+    \item \textbf{Windows: } \\
+    \texttt{python -m venv venv} \\
+    \texttt{venv/Scripts/activate}
+    \item \textbf{macOS/Linux: } \\
+    \texttt{python3 -m venv venv} \\
+    \texttt{source venv/bin/activate}
+    
+\end{itemize}
+
+\subsection{Install Project Python Dependencies}
+
+Once the virtual environment is active, ensure the directory contains \texttt{requirements.txt} and run the following: \\
+
+\texttt{pip install -r requirements.txt}
+
+\section{Running the Program}
+
+With the virtual environment set up and project dependencies installed, the following instructions detail how to launch the application.
+
+\subsection{Running the Flask app}
+
+The app is contained in \texttt{app.py}. To launch it, run (with the venv active), the following: \\
+
+\texttt{python app.py}
+
+\subsection{Running the React frontend}
+
+This iteration of \textit{Melodia} is proof-of-concept and is still being worked on, outside of the scope of this project. For this reason, the React source code / unbuilt project has been submitted. All functionality is complete and functional. In a separate terminal, navigate to the frontend folder using \texttt{cd /server}. To launch it, run the following to install the JavaScript packages first: \\
+
+\texttt{npm install} \\ 
+
+Then, launch it by entering the following: \\
+
+\texttt{npm start} \\
+
+The frontend should then launch in your browser. If it doesn't, enter \texttt{localhost:3000/} into your web browser of choice to load the home page.
+
+\section{Troubleshooting}
+
+If any issues during installation or running are encountered, check the following section for common issues and relevant solutions:
+
+\begin{itemize}
+    \item \textbf{Python Dependency Issues:} If errors occur when running \texttt{pip install -r requirements.txt}, it might be due to missing or incompatible Python versions. Make sure you are using Python 3.10, or a later version.
+    \item \textbf{React Frontend Errors:} If you face port conflict issues, try stopping any other services running on port 3000. You can do so using \texttt{npx kill-port 3000}.
+    \item \textbf{Permission Issues on Windows:} If errors occur while activating the virtual environment on Windows, try running PowerShell as Administrator and/or setting the execution policy using \texttt{Set-ExecutionPolicy Unrestricted -Scope Process}.
+\end{itemize}
+
+\section{Conclusion}
+
+If all goes smoothly, the \textit{Melodia} app should now be running on your machine. You can access the frontend through your web browser at \texttt{localhost:3000}. I hope you enjoy! Here are some well-known songs included in the shortened dataset:
+
+\begin{itemize}
+    \item \textit{Coldplay} - The Scientist
+    \item \textit{Coldplay} - Clocks
+    \item \textit{Elton John} - Rocket Man (I Think It's Going To Be A Long, Long Time)
+    \item \textit{Bobby Helms} - Jingle Bell Rock
+    \item \textit{Maroon 5} - She Will Be Loved - Radio Mix
+    \item \textit{Johnny Cash} - Hurt
+    \item \textit{Whitney Houston} - I Will Always Love You
+    \item \textit{Britney Spears} - Toxic
+    \item \textit{The Cranberries} - Dreams
+    \item \textit{Stevie Wonder} - Superstition
+    \item \textit{Bill Withers} - Lean On Me
+\end{itemize}
